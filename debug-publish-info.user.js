@@ -1,13 +1,13 @@
 // ==UserScript==
 // @id             iitc-plugin-publish-info
-// @name           IITC plugin: Show portal information for publish
+// @name           IITC plugin: Publish well-formed portal information
 // @author         SmallSea
 // @category       Debug
-// @version        0.1.0.0
+// @version        0.1.0.1
 // @namespace      pInfo
 // @updateURL      https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
 // @downloadURL    https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
-// @description    Well format for publish portal information to others
+// @description    Publish well-formed portal information
 // @include        https://www.ingress.com/intel*
 // @include        http://www.ingress.com/intel*
 // @match          https://www.ingress.com/intel*
@@ -27,7 +27,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'jonatkins';
-plugin_info.dateTimeVersion = '0.1.0.0';
+plugin_info.dateTimeVersion = '0.1.0.1';
 plugin_info.pluginId = 'debug-publish-info';
 //END PLUGIN AUTHORS NOTE
 
