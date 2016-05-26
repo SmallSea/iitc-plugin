@@ -1,12 +1,13 @@
 // ==UserScript==
 // @id             iitc-plugin-publish-info
 // @name           IITC plugin: Show portal information for publish
+// @author         SmallSea
 // @category       Debug
 // @version        0.1.0.0
 // @namespace      pInfo
 // @updateURL      https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
 // @downloadURL    https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
-// @description    [SmallSea] Well format for publish portal information to others
+// @description    Well format for publish portal information to others
 // @include        https://www.ingress.com/intel*
 // @include        http://www.ingress.com/intel*
 // @match          https://www.ingress.com/intel*
