@@ -60,6 +60,7 @@ window.plugin.pInfo.showPortalData = function(guid) {
   var res = details.resonators;
 
   var modstring = [];
+  var agentstring = [];
   for (var i = 0; i < mods.length; i++) {
     if (mods[i] == null) {
         continue;
@@ -103,14 +104,14 @@ window.plugin.pInfo.showPortalData = function(guid) {
               break;
     }
     modstring.push(mod);
+    agentstring.push('@' + mods[i].owner);
   }
 
-  var resstring = [];
   for (var i = 0; i < res.length; i++) {
     if (res[i] == null) {
         continue;
     }
-    resstring.push('@' + res[i].owner);
+    agentstring.push('@' + res[i].owner);
   }
 
   function formatNumber (num) {
@@ -119,10 +120,20 @@ window.plugin.pInfo.showPortalData = function(guid) {
 
   var ll = formatNumber(data.latE6) + ',' + formatNumber(data.lngE6);
 
+  function unique(list) {
+    var result = [];
+    $.each(list, function(i, e) {
+        if ($.inArray(e, result) == -1) result.push(e);
+    });
+    return result;
+  }
+
+  var uniqueAgents = unique(agentstring);
+
   var body =
     data.team + ' / L' + data.level + ' / ' + data.title + '</br>' +
     'MODs: ' + modstring.join("/") +'<br />' + 
-    'Agents: ' + resstring.join(" ") +'<br />' + 
+    'Agents: ' + uniqueAgents.join(" ") +'<br />' + 
     'Links: http://www.ingress.com/intel?ll=' + ll + '&pll=' + ll + '&z=17'; 
 
   dialog({
