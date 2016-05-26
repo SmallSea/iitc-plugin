@@ -4,8 +4,8 @@
 // @category       Debug
 // @version        0.1.0.0
 // @namespace      pInfo
-// @updateURL      https://secure.jonatkins.com/iitc/release/plugins/debug-publish-info.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/release/plugins/debug-publish-info.user.js
+// @updateURL      https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
+// @downloadURL    https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
 // @description    [SmallSea] Well format for publish portal information to others
 // @include        https://www.ingress.com/intel*
 // @include        http://www.ingress.com/intel*
