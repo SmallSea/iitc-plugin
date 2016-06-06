@@ -3,7 +3,7 @@
 // @name           IITC plugin: Publish well-formed portal information
 // @author         SmallSea
 // @category       Debug
-// @version        0.1.0.2
+// @version        0.1.1.0
 // @namespace      pInfo
 // @updateURL      https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
 // @downloadURL    https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
@@ -130,8 +130,18 @@ window.plugin.pInfo.showPortalData = function(guid) {
 
   var uniqueAgents = unique(agentstring);
 
+  var frackerString = '';
+  var ornaments = details.ornaments;
+
+  for (var i = 0; i < ornaments.length; i++) {
+    if (ornaments[i] == 'peFRACK') {
+        frackerString = '( Notice: Portal fracker is frying NOW!!! ) <br />';
+    }
+  }
+
   var body =
-    data.team + ' / L' + data.level + ' / ' + data.title + '</br>' +
+    data.team + ' / L' + data.level + ' / ' + data.title + '<br />' + 
+    frackerString +
     'MODs: ' + modstring.join("/") +'<br />' + 
     'Agents: ' + uniqueAgents.join(" ") +'<br />' + 
     'Links: http://www.ingress.com/intel?ll=' + ll + '&pll=' + ll + '&z=17'; 
