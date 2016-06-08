@@ -144,7 +144,8 @@ window.plugin.pInfo.showPortalData = function(guid) {
     frackerString +
     'MODs: ' + modstring.join("/") +'<br />' + 
     'Agents: ' + uniqueAgents.join(" ") +'<br />' + 
-    'Links: http://www.ingress.com/intel?ll=' + ll + '&pll=' + ll + '&z=17'; 
+    'Intel: http://www.ingress.com/intel?ll=' + ll + '&pll=' + ll + '&z=17 <br />' +
+    'gMap: http://maps.google.com/?q=' + ll;
 
   dialog({
     title: title,
