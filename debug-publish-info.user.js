@@ -3,19 +3,19 @@
 // @name           IITC plugin: Publish well-formed portal information
 // @author         SmallSea
 // @category       Debug
-// @version        0.1.1.0
+// @version        0.1.1.1
 // @namespace      pInfo
 // @updateURL      https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
 // @downloadURL    https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
 // @description    Publish well-formed portal information
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -94,7 +94,10 @@ window.plugin.pInfo.showPortalData = function(guid) {
               mod = 'T';
               break;
           case "Link Amp":
-              mod = 'LA';
+              if (mods[i].rarity != 'VERY_RARE')
+                  mod = 'LA';
+              else
+                  mod = "VRLA";
               break;
           case "AXA Shield":
               mod = 'AXA';
@@ -115,7 +118,7 @@ window.plugin.pInfo.showPortalData = function(guid) {
   }
 
   function formatNumber (num) {
-    return num.toString().replace(/(\d)(?=(\d{6})+(?!\d))/g, "$1.")
+    return num.toString().replace(/(\d)(?=(\d{6})+(?!\d))/g, "$1.");
   }
 
   var ll = formatNumber(data.latE6) + ',' + formatNumber(data.lngE6);
