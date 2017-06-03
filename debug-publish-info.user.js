@@ -3,7 +3,7 @@
 // @name           IITC plugin: Publish well-formed portal information
 // @author         SmallSea
 // @category       Debug
-// @version        0.1.1.1
+// @version        0.1.1.2
 // @namespace      pInfo
 // @updateURL      https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
 // @downloadURL    https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
@@ -147,7 +147,7 @@ window.plugin.pInfo.showPortalData = function(guid) {
     frackerString +
     'MODs: ' + modstring.join("/") +'<br />' + 
     'Agents: ' + uniqueAgents.join(" ") +'<br />' + 
-    'Intel: http://www.ingress.com/intel?ll=' + ll + '&pll=' + ll + '&z=17 <br />' +
+    'Intel: http://ingress.com/intel?pll=' + ll + '&z=17 <br />' +
     'gMap: http://maps.google.com/?q=' + ll;
 
   dialog({
