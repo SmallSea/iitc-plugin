@@ -4,7 +4,7 @@
 // @author         SmallSea
 // @contributor    ssr
 // @category       Debug
-// @version        0.1.1.5
+// @version        0.1.1.6
 // @namespace      pInfo
 // @updateURL      https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
 // @downloadURL    https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
@@ -28,7 +28,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'jonatkins';
-plugin_info.dateTimeVersion = '0.1.1.5';
+plugin_info.dateTimeVersion = '0.1.1.6';
 plugin_info.pluginId = 'debug-publish-info';
 //END PLUGIN AUTHORS NOTE
 
