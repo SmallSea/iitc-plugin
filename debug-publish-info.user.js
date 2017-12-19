@@ -2,6 +2,7 @@
 // @id             iitc-plugin-publish-info
 // @name           IITC plugin: Publish well-formed portal information
 // @author         SmallSea
+// @contributor    ssr
 // @category       Debug
 // @version        0.1.1.5
 // @namespace      pInfo
@@ -40,11 +41,11 @@ window.plugin.pInfo = function() {};
 
 window.plugin.pInfo.setupCallback = function() {
     addHook('portalDetailsUpdated', window.plugin.pInfo.addLink);
-}
+};
 
 window.plugin.pInfo.addLink = function(d) {
   $('.linkdetails').append('<aside><a onclick="window.plugin.pInfo.showPortalData(\''+window.selectedPortal+'\')" title="Display information of the portal">Publish Info</a></aside>');
-}
+};
 
 window.plugin.pInfo.showPortalData = function(guid) {
   if (!window.portals[guid]) {
@@ -62,10 +63,10 @@ window.plugin.pInfo.showPortalData = function(guid) {
   var modstring = [];
   var agentstring = [];
   for (var i = 0; i < mods.length; i++) {
-    if (mods[i] == null) {
+    if (mods[i] === null) {
         continue;
     }
-    var mod = ''
+    var mod = '';
       switch (mods[i].rarity) {
           case "COMMON":
               mod = 'C';
@@ -116,8 +117,8 @@ window.plugin.pInfo.showPortalData = function(guid) {
     agentstring.push('@' + mods[i].owner);
   }
 
-  for (var i = 0; i < res.length; i++) {
-    if (res[i] == null) {
+  for (i = 0; i < res.length; i++) {
+    if (res[i] === null) {
         continue;
     }
     agentstring.push('@' + res[i].owner);
@@ -142,17 +143,17 @@ window.plugin.pInfo.showPortalData = function(guid) {
   var frackerString = '';
   var ornaments = details.ornaments;
 
-  for (var i = 0; i < ornaments.length; i++) {
+  for (i = 0; i < ornaments.length; i++) {
     if (ornaments[i] == 'peFRACK') {
         frackerString = '( Notice: Portal fracker is frying NOW!!! ) <br />';
     }
   }
 
   var body =
-    data.team + ' / L' + data.level + ' / ' + data.title + '<br />' + 
+    data.team + ' / L' + data.level + ' / ' + data.title + '<br />' +
     frackerString +
-    'MODs: ' + modstring.join("/") +'<br />' + 
-    'Agents: ' + uniqueAgents.join(" ") +'<br />' + 
+    'MODs: ' + modstring.join("/") +'<br />' +
+    'Agents: ' + uniqueAgents.join(" ") +'<br />' +
     'Intel: http://ingress.com/intel?pll=' + ll + '&z=17 <br />' +
     'gMap: http://maps.google.com/?q=' + ll;
 
@@ -162,7 +163,7 @@ window.plugin.pInfo.showPortalData = function(guid) {
     id: 'dialog-pInfo',
     dialogClass: 'ui-dialog-pInfo',
   });
-}
+};
 
 var setup = function () {
   window.plugin.pInfo.setupCallback();
@@ -177,7 +178,7 @@ var setup = function () {
         'overflow-y: auto;' +
     '}' +
     '</style>');
-}
+};
 
 
 // PLUGIN END //////////////////////////////////////////////////////////
