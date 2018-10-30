@@ -4,15 +4,15 @@
 // @author         SmallSea
 // @contributor    ssr
 // @category       Debug
-// @version        0.1.1.6
+// @version        0.1.2.0
 // @namespace      pInfo
 // @updateURL      https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
 // @downloadURL    https://github.com/SmallSea/iitc-plugin/raw/master/debug-publish-info.user.js
 // @description    Publish well-formed portal information
-// @include        https://*.ingress.com/intel*
-// @include        http://*.ingress.com/intel*
-// @match          https://*.ingress.com/intel*
-// @match          http://*.ingress.com/intel*
+// @include        https://intel.ingress.com/*
+// @include        http://intel.ingress.com/*
+// @match          https://intel.ingress.com/*
+// @match          http://intel.ingress.com/*
 // @include        https://*.ingress.com/mission/*
 // @include        http://*.ingress.com/mission/*
 // @match          https://*.ingress.com/mission/*
@@ -28,7 +28,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'jonatkins';
-plugin_info.dateTimeVersion = '0.1.1.6';
+plugin_info.dateTimeVersion = '0.1.2.0';
 plugin_info.pluginId = 'debug-publish-info';
 //END PLUGIN AUTHORS NOTE
 
@@ -154,7 +154,7 @@ window.plugin.pInfo.showPortalData = function(guid) {
     frackerString +
     'MODs: ' + modstring.join("/") +'<br />' +
     'Agents: ' + uniqueAgents.join(" ") +'<br />' +
-    'Intel: http://ingress.com/intel?pll=' + ll + '&z=17 <br />' +
+    'Intel: http://intel.ingress.com/?pll=' + ll + '&z=17 <br />' +
     'gMap: http://maps.google.com/?q=' + ll;
 
   dialog({
